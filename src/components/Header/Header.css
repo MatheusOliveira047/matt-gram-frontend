@@ -14,16 +14,19 @@
 
 .header form svg{
   position: absolute;
-  top: 10px;
+  top: 18px;
   left: 9px;
+  color: #000;
+  font-size: 1.3em;
 }
 
 .header form input{
-  padding: 2.5em;
+  padding: 1.5em 2.6em;
   border: none;
   border-radius: 5px;
   width: 100%;
   margin: 0;
+  outline: none;
 }
 
 .header nav .navlinks{
@@ -38,6 +41,10 @@
   cursor: pointer;
 }
 
-.header nav .navlinks svg{
-  font-size: 1.5;
+.header nav .navlinks li svg{
+  font-size: 1.5em;
+}
+
+.header nav .navlinks li a {
+  color:#fff;
 }
