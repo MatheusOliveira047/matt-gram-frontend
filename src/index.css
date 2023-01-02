@@ -62,7 +62,8 @@ input[type="submit"]{
   font-weight: bold;
   cursor: pointer;
   opacity: 0.8;
-  transition: 200ms ease-in-out;
+  transition: 2
+  00ms ease-in-out;
   font-size: 1em;
 }
 
