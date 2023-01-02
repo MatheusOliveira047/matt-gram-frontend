@@ -1,0 +1,43 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  border-bottom: 1px solid #363636;
+  padding: 0.1em 1em ;
+}
+
+.header form {
+  position: relative;
+  width: 20%;
+}
+
+.header form svg{
+  position: absolute;
+  top: 10px;
+  left: 9px;
+}
+
+.header form input{
+  padding: 2.5em;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0;
+}
+
+.header nav .navlinks{
+  display: flex;
+  align-items: center;
+}
+
+.header nav .navlinks li{
+  margin-right: 1em;
+}
+.header nav .navlinks span{
+  cursor: pointer;
+}
+
+.header nav .navlinks svg{
+  font-size: 1.5;
+}
