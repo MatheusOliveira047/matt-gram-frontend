@@ -15,7 +15,7 @@ const register = async(data)=>{
   } catch (error) {
     console.log(error)
   }
-
+  
 }
 
 const authService = {
