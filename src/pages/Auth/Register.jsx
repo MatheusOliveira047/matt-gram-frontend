@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom'
 
 import { useState,useEffect } from 'react'
 
+import { useSelector,useDispatch } from 'react-redux'
+
+import { register,reset } from '../../slices/authSlice'
+
 
 const Register = ()=>{
   
@@ -12,6 +16,10 @@ const Register = ()=>{
   const [password,setPassword] = useState('')
   const [confirmPassword,setConfirmPassword] = useState('')
 
+
+  const dispatch = useDispatch()
+
+  const {loading,error} = useSelector((state) => state.auth)
 
   const handleSubmitRegister = (e)=>{
     e.preventDefault()
@@ -24,7 +32,15 @@ const Register = ()=>{
     }
 
     console.log(user)
+
+    dispatch(register(user))
   }
+
+
+  // clean all states
+  useEffect(()=>{    
+    dispatch(reset())
+  },[dispatch])
   
   return(
     <div id='register'>
@@ -52,7 +68,7 @@ const Register = ()=>{
         <input 
           type="password" 
           placeholder='Conforme a Senha'
-          onChange={(e)=> setConfirmPa(e.target.value)}
+          onChange={(e)=> setConfirmPassword(e.target.value)}
           value={confirmPassword || ''}
         />
         <input type="submit" value="Cadastrar" />
