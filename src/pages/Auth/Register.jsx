@@ -8,6 +8,7 @@ import { useSelector,useDispatch } from 'react-redux'
 
 import { register,reset } from '../../slices/authSlice'
 
+import Message from '../../components/Message'
 
 const Register = ()=>{
   
@@ -71,7 +72,10 @@ const Register = ()=>{
           onChange={(e)=> setConfirmPassword(e.target.value)}
           value={confirmPassword || ''}
         />
-        <input type="submit" value="Cadastrar" />
+        {!loading && <input type="submit" value="Cadastrar" />}
+        {loading &&  <input type="submit" value="Aguarde..." disabled/>}
+        {error && <Message msg={error} type="error"/>}
+
       </form>
       <p>Já possui conta ? <Link to={"/login"}>Clique Aqui</Link></p>
     </div>
