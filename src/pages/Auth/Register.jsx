@@ -46,7 +46,7 @@ const Register = ()=>{
   return(
     <div id='register'>
       <h2>Matt Gram</h2>
-      <p className='subtitle'> Cadastra-se para ver as fotos de seus</p>
+      <p className='subtitle'> Cadastra-se para ver as fotos de seus amigos</p>
       <form onSubmit={handleSubmitRegister}>
         <input 
           type="text" 
